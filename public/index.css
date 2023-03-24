@@ -1,0 +1,196 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  max-width: 780px;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+
+.header {
+  height: 13em;
+  width: 100%;
+  background: url(./image/movie-background.jpg);
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5em;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding-top: 4em;
+  position: relative;
+}
+
+.watchlist-container {
+  padding-top: 2em;
+}
+
+.search-input {
+  width: 80%;
+  height: 2.7em;
+  background-color: #fff;
+  padding: 0 auto;
+  position: absolute;
+  top: -1.3em;
+  left: 9.5%;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 0.4em;
+}
+
+.search-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search-form input, 
+.search-form button {
+  height: 100%;
+  border: none;
+}
+
+.search-icon {
+  margin: 0.5em;
+  color: #6B7280;
+  font-size: 1.25em;
+}
+
+.search-form input {
+  flex: 1;
+  outline: none;
+}
+
+.search-form button {
+  width: 7em;
+  padding: 0.6em 1.5em;
+  cursor: pointer;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  color: #6B7280;
+}
+
+.explore {
+  width: 100%;
+  margin-top: 8em;
+  text-align: center;
+}
+
+.explore img {
+  width: 17%;
+  margin-bottom: 1em;
+}
+
+.explore p {
+  font-size: 1.25rem;
+}
+
+.movie-container {
+  height: 10em;
+  min-height: 100%;
+  width: 90%;
+  margin: 0 auto 1em;
+  display: grid;
+  grid-template: 3.5em .3em / max-content 1fr 1fr 1fr;
+  gap: .7em;
+  overflow: hidden;
+}
+
+.movie-container span {
+  font-size: 0.6rem;
+}
+
+.movie-title,.movie-sub {
+  color: black;
+}
+
+.movie-image {
+  height: 10em;
+  grid-column: 1 / 2;
+}
+
+.movie-title {
+  grid-column: 2 / -1;
+  margin-top: .6em;
+  font-size: .8rem;
+}
+
+.movie-sub {
+  grid-column: 2 / -1;
+  display: flex;
+  gap: 1.5em;
+}
+
+.movie-text {
+  grid-column: 2 / -1;
+  font-size: .7rem;
+}
+
+.add-btn {
+  cursor: pointer;
+  display: inline;
+}
+
+.empty-watchlist {
+  display: block;
+  text-align: center;
+  margin-top: 8.5em;
+}
+
+.empty-watchlist p {
+  margin-bottom: 1em;
+  font-size: 1.25rem;    
+}
+
+.empty-watchlist a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+
+@media (min-width: 650px) {
+  .movie-container {
+    height: 17em;
+    grid-template: 4.5em 1em / max-content 1fr 1fr 1fr;
+    gap: 1.5em;
+  }
+  
+  .movie-container span {
+    font-size: 0.75rem;
+  }
+  
+  .movie-image {
+    height: 17em;
+  }
+  
+  .movie-title {
+    margin-top: .85em;
+    font-size: .8rem;
+  }
+
+  .movie-text {
+    font-size: .9rem;
+    line-height: 1.3;
+  }
+}
